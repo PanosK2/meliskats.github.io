@@ -259,20 +259,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    flex-wrap: wrap; /* Νέα προσθήκη: επιτρέπει την αναδιάταξη σε πολλές γραμμές */
+    gap: 10px; /* Νέα προσθήκη: δημιουργεί χώρο μεταξύ των κουμπιών */
 }
 
 .menu-button {
-    display: inline-block;
-    margin: 0 10px;
+    /* Κρατάμε το display: block; για να μην είναι inline */
+    margin: 0;
     padding: 8px 12px;
     border-radius: 5px;
     background-color: #967c33;
     color: #fff;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    width: calc(33.33% - 20px); /* Νέα προσθήκη: κάθε κουμπί παίρνει 33.33% πλάτος με απόσταση 10px */
+    margin-bottom: 10px; /* Νέα προσθήκη: δημιουργεί χώρο κάτω από κάθε κουμπί */
 }
-
 .menu-button:hover {
     background-color: #d32f2f;
 }
@@ -307,16 +309,15 @@ body {
 }
 
 /* Responsive Styling */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 300px) {
     .menu-container {
-        flex-wrap: wrap;
+        flex-direction: column; /* Αλλαγή κατεύθυνσης σε στήλη */
+        align-items: stretch; /* Τέντωμα των κουμπιών σε πλήρη πλάτος */
     }
-    
+
     .menu-button {
-        margin: 10px;
-        width: 100%; /* Πλήρης πλάτος κουμπιού σε μικρή οθόνη */
+        width: calc(50% - 10px); /* Κάθε κουμπί παίρνει 50% πλάτος με απόσταση 5px */
     }
-    
     .search-bar {
         margin-top: 10px;
         margin-right: 10px;
