@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 20px; /* Ρύθμιση απόστασης από το πάνω μέρος */
+    margin-top: 20px;
     margin-right: 20px;
 }
 
@@ -52,24 +52,6 @@ body {
 
 .search-bar button:hover {
     background-color: #d32f2f; /* Χρώμα φόντου του κουμπιού κατά το hover */
-}
-
-.gallery {
-    position: relative;
-    width: fit-content;
-    overflow: hidden; /* Απόκρυψη περιττών στοιχείων εκτός ορίων */
-}
-
-.gallery-item {
-    position: relative;
-    object-fit: cover;
-    width: 100%;
-    opacity: 0; /* Αρχικά αόρατο */
-    transition: opacity 0.5s ease-in-out;
-}
-
-.gallery-item.active {
-    opacity: 1; /* Εμφανίζεται μετάβαση */
 }
 
 .menu-container {
@@ -131,6 +113,7 @@ body {
     
     .menu-button {
         margin: 10px;
+        width: 100%; /* Πλήρης πλάτος κουμπιού σε μικρή οθόνη */
     }
     
     .search-bar {
