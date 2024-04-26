@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsar Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <div class="menu">
+        <header>
+            <h1>pulsar</h1>
+            <p class="established">all day bar</p>
+            <header1 class="title">
+                <button class="buttonmenu" style=" -webkit-text-fill-color: rgba(156, 5, 5, 0);">Left Button</button>
+    <p>Menu</p>
+    <button class="buttonmenu" style=" -webkit-text-fill-color: rgba(156, 5, 5, 0);">Right Button</button>
+            </header1></header><hr>
+        <div class="button-container">
+            <a href="#" onclick="openModal('http://127.0.0.1/pulsarcatalog/catalog - Copy/coffee.html')">ΚΑΦΕΣ / COFFEE</a>    
+            <a href="#" onclick="openModal('http://192.168.137.1/pulsarcatalog/catalog - Copy/beverages.html')">ΡΟΦΗΜΑΤΑ / BEVERAGES</a>
+            <a href="#" onclick="openModal('http://192.168.137.1/pulsarcatalog/catalog - Copy/softdrinks.html')">ΑΝΑΨΥΚΤΙΚΑ / SOFT DRINKS</a>
+            <a href="#" onclick="openModal('http://192.168.137.1/pulsarcatalog/catalog - Copy/freshjuices.html')">ΦΥΣΙΚΟΙ ΧΥΜΟΙ / FRESH JUICES</a>
+            <a href="#" onclick="openModal('http://192.168.137.1/pulsarcatalog/catalog - Copy/beers.html')">ΜΠΥΡΕΣ / BEERS</a>
+            <a href="#" onclick="openModal('http://192.168.137.1/pulsarcatalog/catalog - Copy/wines.html')">ΚΡΑΣΙΑ / WINES</a>
+            <a href="#" onclick="openModal('http://192.168.137.1/pulsarcatalog/catalog - Copy/drinks.html')">ΠΟΤΑ / DRINKS</a>
+            <a href="#" onclick="openModal('http://192.168.137.1/pulsarcatalog/catalog - Copy/food.html')">ΚΡΥΑ ΠΙΑΤΑ / FOOD</a>
+            <a href="#" onclick="openModal('http://192.168.137.1/pulsarcatalog/catalog - Copy/yoghurtfruits.html')">ΓΙΑΟΥΡΤΙ - ΦΡΟΥΤΑ / YOGHURT - FRUITS</a>
+            <a href="#" onclick="openModal('http://192.168.137.1/pulsarcatalog/catalog - Copy/desserts.html')">ΓΛΥΚΕΣ ΑΠΟΛΑΥΣΕΙΣ / DESSERTS</a>
+            <!-- Add more buttons if needed -->
+        </div>
+        <div id="modal-container" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <iframe id="modal-iframe" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+
+    </div>
+    <hr>
+   
+    <script>
+ function fadeIn(element, duration) {
+    var start = null;
+    element.style.opacity = 0;
+    element.style.display = "flex";
+
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        var progress = timestamp - start;
+        element.style.opacity = Math.min(progress / duration, 1);
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+        }
+    }
+
+    window.requestAnimationFrame(step);
+}
+
+function openModal(url) {
+    var modalContainer = document.getElementById("modal-container");
+    fadeIn(modalContainer, 500); // Adjust the duration of the animation as needed
+
+    // Additional functionality for your function
+    document.getElementById("modal-iframe").src = url;
+}
+        function closeModal() {
+            document.getElementById("modal-iframe").src = "";
+            document.getElementById("modal-container").style.display = "none";
+        }
+    </script>
+</body>
+</html>

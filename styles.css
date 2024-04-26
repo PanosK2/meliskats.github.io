@@ -1,0 +1,204 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #613000;
+}
+
+.main-header {
+    background-color: #fee05e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    flex: 0 0 auto;
+}
+
+.header-right-section {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px; /* Ρύθμιση απόστασης από το πάνω μέρος */
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    width: 100px; /* Ρυθμίστε το πλάτος του πεδίου εισαγωγής αναζήτησης */
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Στρογγυλεύστε τις γωνίες μόνο στο αριστερό μέρος */
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #967c33; /* Χρώμα φόντου του κουμπιού */
+    border: none;
+    padding: 8px 10px;
+    border-radius: 0 5px 5px 0; /* Στρογγυλεύστε τις γωνίες μόνο στο δεξί μέρος */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button img {
+    width: 20px; /* Ρυθμίστε το πλάτος του εικονιδίου αναζήτησης */
+    height: 20px; /* Ρυθμίστε το ύψος του εικονιδίου αναζήτησης */
+    vertical-align: middle; /* Ευθυγραμμίστε το εικονίδιο κεντρικά με το κείμενο */
+}
+
+.search-bar button:hover {
+    background-color: #d32f2f; /* Χρώμα φόντου του κουμπιού κατά το hover */
+}
+
+
+.gallery {
+     /* CSS για τη gallery */
+     .gallery {
+        position: relative;
+        width: fit-content;
+        overflow: hidden; /* Απόκρυψη περιττών στοιχείων εκτός ορίων */
+    }
+
+    .gallery-item {
+        position: center;
+        object-position: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0; /* Αρχικά αόρατο */
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .gallery-item.active {
+        opacity: 1; /* Εμφανίζεται μετάβαση */
+    }
+}
+.oval-container {
+    width: 100px; /* Προσαρμόστε το πλάτος και το ύψος ανάλογα με τις ανάγκες σας */
+    height: 150px;
+    border-radius: 30%;
+    border-end-end-radius: 30%;
+    border-top-left-radius: 30%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    align-content: center ;
+}
+.main-nav {
+    background-color: #fee05e;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+/* Menu Styling */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menu-button {
+    display: inline-block; /* Καθορίζει τα κουμπιά να είναι inline-block για να ρυθμίσει τον στοιχισμό */
+    margin: 0 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #967c33; /* Χρώμα κουμπιού */
+    color: #fff; /* Χρώμα κειμένου */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    vertical-align: middle; /* Στοιχισμός σε επίπεδο με τα υπόλοιπα κουμπιά */
+}
+
+
+.menu-button:hover {
+    background-color: #d32f2f; /* Χρώμα κουμπιού κατά το hover */
+}
+
+.menu-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #967c33;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.menu-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-right: 15px;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #967c33; /* Χρώμα κουμπιού */
+    color: #fff; /* Χρώμα κειμένου */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: #d32f2f; /* Χρώμα κουμπιού κατά το hover */
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+}
+
+.intro-section {
+    background-color: #fcfc7f;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.slogan-section {
+    background-color: #c4ad39;
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #fee05e;
+    padding: 20px;
+    text-align: center;
+}
