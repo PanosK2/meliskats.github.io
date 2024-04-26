@@ -19,11 +19,6 @@ body {
     flex: 0 0 auto;
 }
 
-.header-right-section {
-    display: flex;
-    align-items: center;
-}
-
 .search-bar {
     display: flex;
     align-items: center;
@@ -59,67 +54,44 @@ body {
     background-color: #d32f2f; /* Χρώμα φόντου του κουμπιού κατά το hover */
 }
 
-
 .gallery {
-     /* CSS για τη gallery */
-     .gallery {
-        position: relative;
-        width: fit-content;
-        overflow: hidden; /* Απόκρυψη περιττών στοιχείων εκτός ορίων */
-    }
+    position: relative;
+    width: fit-content;
+    overflow: hidden; /* Απόκρυψη περιττών στοιχείων εκτός ορίων */
+}
 
-    .gallery-item {
-        position: center;
-        object-position: center;
-        top: 0;
-        left: 0;
-        width: 100%;
-        opacity: 0; /* Αρχικά αόρατο */
-        transition: opacity 0.5s ease-in-out;
-    }
+.gallery-item {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    opacity: 0; /* Αρχικά αόρατο */
+    transition: opacity 0.5s ease-in-out;
+}
 
-    .gallery-item.active {
-        opacity: 1; /* Εμφανίζεται μετάβαση */
-    }
+.gallery-item.active {
+    opacity: 1; /* Εμφανίζεται μετάβαση */
 }
-.oval-container {
-    width: 100px; /* Προσαρμόστε το πλάτος και το ύψος ανάλογα με τις ανάγκες σας */
-    height: 150px;
-    border-radius: 30%;
-    border-end-end-radius: 30%;
-    border-top-left-radius: 30%;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    align-content: center ;
-}
-.main-nav {
-    background-color: #fee05e;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-/* Menu Styling */
+
 .menu-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 
 .menu-button {
-    display: inline-block; /* Καθορίζει τα κουμπιά να είναι inline-block για να ρυθμίσει τον στοιχισμό */
+    display: inline-block;
     margin: 0 10px;
     padding: 8px 12px;
     border-radius: 5px;
-    background-color: #967c33; /* Χρώμα κουμπιού */
-    color: #fff; /* Χρώμα κειμένου */
+    background-color: #967c33;
+    color: #fff;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    vertical-align: middle; /* Στοιχισμός σε επίπεδο με τα υπόλοιπα κουμπιά */
 }
 
-
 .menu-button:hover {
-    background-color: #d32f2f; /* Χρώμα κουμπιού κατά το hover */
+    background-color: #d32f2f;
 }
 
 .menu-dropdown {
@@ -137,7 +109,7 @@ body {
 }
 
 .dropdown-content a {
-    color: rgb(255, 255, 255);
+    color: #fff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -151,54 +123,22 @@ body {
     display: block;
 }
 
-
-.main-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.main-nav li {
-    margin-right: 15px;
-}
-
-.main-nav a {
-    display: inline-block;
-    padding: 8px 12px;
-    border-radius: 5px;
-    background-color: #967c33; /* Χρώμα κουμπιού */
-    color: #fff; /* Χρώμα κειμένου */
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.main-nav a:hover {
-    background-color: #d32f2f; /* Χρώμα κουμπιού κατά το hover */
-}
-
-/* Main Content Styling */
-main {
-    padding: 20px;
-}
-
-.intro-section {
-    background-color: #fcfc7f;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.slogan-section {
-    background-color: #c4ad39;
-    padding: 20px;
-    border-radius: 8px;
-    color: #fff;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #fee05e;
-    padding: 20px;
-    text-align: center;
+/* Responsive Styling */
+@media only screen and (max-width: 600px) {
+    .menu-container {
+        flex-wrap: wrap;
+    }
+    
+    .menu-button {
+        margin: 10px;
+    }
+    
+    .search-bar {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    
+    .search-bar input[type="text"] {
+        width: 80px;
+    }
 }
